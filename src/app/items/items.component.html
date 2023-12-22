@@ -1,0 +1,9 @@
+<ul *ngFor="let i of items">
+    <li>
+        <div>
+        {{i.name}} {{i.price}}
+        <button (click)="add(i)">Add to cart</button>
+    </div>
+    </li>
+
+</ul>
