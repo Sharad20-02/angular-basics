@@ -1,0 +1,60 @@
+<p>e-info works!</p>
+<p>Email is {{email}}</p>
+<p>password is {{password}}</p>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <input type="text" name="location" value="" [(ngModel)]="location">
+    <button style="width:100px" class="btn btn-primary" (click)="updateInfo()">add info</button>
+    <br>
+    <p>Info is : {{location}}</p>
+</div>
+
+<br>
+<br>
+
+<ul class="list-group">
+    <li *ngFor="let info of infoReceived1" class="list-group-info">{{info}}</li>
+</ul>
+<br>
+<br>
+<button style="width:100px" class="btn btn-primary" (click)="getInfoFromService1()">get Info1</button>
+<br>
+<br>
+
+<ul class="list-group">
+    <li *ngFor="let info of infoReceived2" class="list-group-info">{{info}}</li>
+</ul>
+<br>
+<br>
+<button class="btn btn-primary" (click)="getInfoFromService2()">getInfo2</button>
+<br>
+<br>
+
+<ul class="list-group">
+    <li *ngFor="let info of infoReceived3" class="list-group-info">{{info}}</li>
+</ul>
+<br>
+<br>
+<button class="btn btn-primary" (click)="getInfoFromService3()">getInfo3</button>
+<br>
+<br>
+
+<br>
+<br>
+<button style="width:100px" class="btn btn-primary" (click)="Add()">Add</button>
+<br>
+<br>
+<p>Count = {{count}}</p>
+<button class="btn btn-primary" (click)="Subtract()">Sub</button>
+<br>
+<br>
+
+<div *ngIf="count>5; else block2">
+    <p>If condition is true: count > 5</p>
+</div>
+<ng-template #block2>
+    <p>else condition is true: count < 5</p>
+</ng-template>
