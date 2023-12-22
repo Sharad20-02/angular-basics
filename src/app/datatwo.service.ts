@@ -38,5 +38,8 @@ export class DatatwoService {
     }
     return sum;
   };
+  getLength = () => {
+    return this.cart.length;
+  };
   constructor() {}
 }

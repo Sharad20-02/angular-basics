@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatatwoService } from './datatwo.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  constructor(private datatwoService: DatatwoService) {
+    this.count = this.datatwoService.getLength();
+  };
+
+  getCount(): number {
+    return this.datatwoService.getLength();
+  }
+
+  count: number = 0;
   title = 'forms';
 }
